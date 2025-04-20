@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Phone from './Phone';
+import Button from './ui/button';
 
 const PhonesContainer = ({ phonesData }) => {
     // console.log(phonesData)
@@ -27,10 +28,15 @@ const PhonesContainer = ({ phonesData }) => {
                 }
             </div>
 
-            <button onClick={() => {
+            {/* <button onClick={() => {
                 setShowAll(!showAll)
                 if (showAll) window.scrollTo(0, 0)
-            }} className='btn my-5'>{showAll ? 'Show less' : 'Show All'}</button>
+            }} className='btn my-5'>{showAll ? 'Show less' : 'Show All'}</button> */}
+
+            <Button onClick={() => {
+                setShowAll(!showAll)
+                if (showAll) window.scrollTo(0, 0)
+            }} lable={showAll ? 'Show less' : 'Show All'}></Button>
         </div>
     );
 };
